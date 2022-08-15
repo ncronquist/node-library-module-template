@@ -1,0 +1,46 @@
+{
+  "name": "typescript-module-template",
+  "version": "0.0.1",
+  "description": "An example template for starting a new Typescript module.",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/ncronquist/typescript-module-template.git"
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rimraf dist/ && tsc -p tsconfig-build.json",
+    "clean": "rimraf dist/ .nyc_output node_modules",
+    "coverage": "NODE_ENV=test nyc mocha --reporter=min",
+    "format": "npm run lint-fix",
+    "lint": "tsc -p tsconfig.json --noEmit && eslint . --ext .ts && editorconfig-checker",
+    "lint-fix": "eslint . --ext .ts --fix",
+    "test": "NODE_ENV=test mocha",
+    "test-watch": "npm test -- --watch"
+  },
+  "author": "Nick Cronquist <nick@ncronquist.com>",
+  "license": "MIT",
+  "files": ["/dist"],
+  "devDependencies": {
+    "@istanbuljs/nyc-config-typescript": "1.0.2",
+    "@types/chai": "4.3.3",
+    "@types/eslint": "8.4.5",
+    "@types/mocha": "9.1.1",
+    "@types/node": "18.7.3",
+    "@typescript-eslint/parser": "5.33.0",
+    "chai": "4.3.6",
+    "editorconfig-checker": "4.0.2",
+    "eslint": "8.21.0",
+    "eslint-config-airbnb-typescript": "17.0.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-mocha": "10.1.0",
+    "eslint-plugin-prettier": "4.2.1",
+    "mocha": "10.0.0",
+    "nyc": "15.1.0",
+    "prettier": "2.7.1",
+    "rimraf": "3.0.2",
+    "source-map-support": "0.5.21",
+    "ts-node": "10.9.1",
+    "typescript": "4.7.4"
+  }
+}
