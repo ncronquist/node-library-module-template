@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 16
+        cache: 'npm'
+    - name: Install Dependencies
+      run: npm ci
+
+    - name: Check formatting and linting
+      run: npm run lint
+
+    - name: Run Tests
+      run: npm run test
+
+    - name: Run Coverage
+      run: npm run coverage
+
+    - name: Authenticate with NPM
+      run: "npm config set '//registry.npmjs.org/:_authToken' \"${NPM_TOKEN}\""
+
+    - name: Publish
+      run: npm publish

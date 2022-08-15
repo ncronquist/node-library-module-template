@@ -1,0 +1,14 @@
+# Compiled Typescript
+dist/
+
+# Dependency directories
+node_modules/
+
+# Output of 'npm pack'
+*.tgz
+
+# Istanbul coverage output
+.nyc_output
+
+# OS specific files
+.DS_Store
