@@ -1,12 +1,13 @@
-# s3-helper
+# Node Library Module Template
 
-This package doesn't do anything yet 🙃
+This is a template project for creating other Node.js library modules and
+publishing them to NPM.
 
 
 ## Installation
 
 ```sh
-npm install --save-prod --save-exact s3-helper
+npm install --save-prod --save-exact node-library-module-template
 ```
 
 

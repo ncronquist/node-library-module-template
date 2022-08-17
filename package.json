@@ -1,7 +1,11 @@
 {
-  "name": "s3-helper",
-  "version": "0.0.2",
-  "description": "S3 helper library",
+  "name": "node-library-module-template",
+  "version": "0.0.1",
+  "description": "An example template for starting a new Node.js library module.",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/ncronquist/node-library-module-template.git"
+  },
   "main": "dist/index.js",
   "scripts": {
     "build": "rimraf dist/ && tsc -p tsconfig-build.json",
